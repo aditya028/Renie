@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+ backend:
+    build: ./backend
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongodb
+    networks:
+      - app-network
+    volumes:
+      - ./backend:/app
+
+ mongodb:
+    image: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
+    ports:
+      - "27017:27017"
+    networks:
+      - app-network
+
+ frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      - app-network
+    volumes:
+      - ./frontend:/app
+
+networks:
+ app-network:
+    driver: bridge
