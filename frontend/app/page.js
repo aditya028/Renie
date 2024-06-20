@@ -13,6 +13,7 @@ import { TbWeight } from "react-icons/tb";
 import { SlEnergy } from "react-icons/sl";
 import { GiIsland } from "react-icons/gi";
 import { LuFuel } from "react-icons/lu";
+import reward from '@/public/reward.png'
 
 export default function Home() {
   const [bins, setBins] = useState();
@@ -54,6 +55,27 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col  py-24 max-w-[1300px] m-auto">
+      <div className="flex md:flex-row-reverse flex-col bg-[#E4E7EB] gap-10 py-[80px] px-10 rounded-[16px] mt-10">
+        <Image
+          src={reward}
+          alt="reward"
+          width={700}
+          height={700}
+        />
+        <div className="flex flex-col justify-center gap-5">
+          <h1 className="text-[35px] font-bold leading-[45px]">
+            Boost Your Business: Partner with Us, Display Our QR Code, and
+            Reward Your Customers
+          </h1>
+          <p>
+            Partner with us and unlock a world of rewards for your customers By
+            displaying our QR code, you offer them exclusive deals and
+            discounts, fostering loyalty and boosting your brand's visibility.
+            Join us in creating a seamless shopping experience that benefits
+            everyone.
+          </p>
+        </div>
+      </div>
       <div className="flex md:flex-row flex-col gap-10 py-10 px-2">
         <Image
           src="https://www.renie.io/wp-content/uploads/2023/11/fifth-step.png"
@@ -71,6 +93,7 @@ export default function Home() {
           </p>
         </div>
       </div>
+
       <div className="bg-gray-200 px-5 py-24 flex flex-col gap-5">
         <h1 className="text-[40px] text-center">How it Works</h1>
         <p className="text-center">

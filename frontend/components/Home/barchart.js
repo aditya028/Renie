@@ -44,7 +44,7 @@ export default function Barchart() {
           ],
         }}
       />
-      <p className="text-center">Year collection</p>
+      <p className="text-center">Renie's Bin monthly transaction</p>
     </div>
   );
 }

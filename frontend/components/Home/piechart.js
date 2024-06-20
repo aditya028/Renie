@@ -24,7 +24,7 @@ export default function Piechart({data}) {
         ],
       }}
     />
-      <p className="text-center">Total Collections all Time</p>
+      <p className="text-center">Renie's Bin total transaction</p>
 
   </div>
 }
